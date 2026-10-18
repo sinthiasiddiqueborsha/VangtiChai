@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablet Sizes -->
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_top_amount">36dp</dimen>
+
+    <dimen name="padding_tiny">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+
+    <dimen name="keypad_btn_height">64dp</dimen>
+    <dimen name="keypad_btn_margin">6dp</dimen>
+
+    <dimen name="text_size_amount">28sp</dimen>
+    <dimen name="text_size_denom">24sp</dimen>
+    <dimen name="text_size_keypad">24sp</dimen>
+</resources>

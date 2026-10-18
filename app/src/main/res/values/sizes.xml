@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding and Margins -->
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_top_amount">24dp</dimen>
+
+    <dimen name="padding_tiny">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+    <!-- Keypad Button Sizes -->
+    <dimen name="keypad_btn_height">48dp</dimen>
+    <dimen name="keypad_btn_margin">3dp</dimen>
+
+    <!-- Text Sizes matching reference screenshot -->
+    <dimen name="text_size_amount">20sp</dimen>
+    <dimen name="text_size_denom">18sp</dimen>
+    <dimen name="text_size_keypad">18sp</dimen>
+</resources>

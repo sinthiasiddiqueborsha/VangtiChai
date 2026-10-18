@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_large"
+    tools:context=".MainActivity">
+
+    <!-- Top Amount Display -->
+
+    <!-- Guideline dividing Left (Breakdown) and Right (Keypad) -->
+
+    <TextView
+        android:id="@+id/tvAmountDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:text="@string/taka_empty"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/text_size_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Taka: 688" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenterVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <!-- Left Side Breakdown List -->
+
+    <!-- Right Side Custom Keypad -->
+
+    <LinearLayout
+        android:id="@+id/containerBreakdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCenterVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountDisplay">
+
+        <TextView
+            android:id="@+id/tv500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="500: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="100: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="50: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="20: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="10: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="5: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:text="2: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1: 0"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_denom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerKeypad"
+        android:layout_width="243dp"
+        android:layout_height="257dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guidelineCenterVertical"
+        app:layout_constraintTop_toBottomOf="@id/tvAmountDisplay">
+
+        <!-- Row 1: 1, 2, 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_1"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_2"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_3"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <!-- Row 2: 4, 5, 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_4"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_5"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_6"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <!-- Row 3: 7, 8, 9 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_7"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_8"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_9"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <!-- Row 4: 0, CLEAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_0"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/keypad_btn_height"
+                android:layout_margin="@dimen/keypad_btn_margin"
+                android:layout_weight="2"
+                android:background="@drawable/bg_keypad_button"
+                android:text="@string/btn_clear"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_keypad"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

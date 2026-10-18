@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Teal Theme Colors matching reference screenshots -->
+    <color name="primary">#008577</color>
+    <color name="primary_dark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="window_background">#FFFFFF</color>
+    <color name="text_black">#000000</color>
+    <color name="text_dark">#212121</color>
+
+    <!-- Keypad Grey Buttons -->
+    <color name="btn_grey_bg">#E0E0E0</color>
+    <color name="btn_grey_pressed">#BDBDBD</color>
+    <color name="btn_grey_stroke">#D6D6D6</color>
+</resources>
